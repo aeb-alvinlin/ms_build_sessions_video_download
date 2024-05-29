@@ -1,5 +1,5 @@
 # author: jacques.spectre@gmail.com
-# date: 2022-04-26, 12:23pm
+# date: 2024-05-28, 12:23pm
 # Jacques 工作室
 # all rights are reserved
 # version: 0.1
@@ -82,7 +82,7 @@ with open(os.path.join(src_path, 'build_csv_with_download.csv'), 'w', encoding='
                 if len(blocks)!= 1:
                     print('error! blocks')
                     break
-                block_pill = ''.join(pill for pill in blocks[0])
+                block_pill = '|'.join(pill for pill in blocks[0])
             new_build_list[title_line.index('標籤')] = block_pill
 
             duration_item = ''
