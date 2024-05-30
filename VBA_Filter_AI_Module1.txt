@@ -1,0 +1,52 @@
+Option Base 1
+Sub Macro1()
+    Dim Str As String
+    Dim i, j, k As Long
+    Dim WidthAlignment As Variant
+    Application.ScreenUpdating = False
+    For i = 2 To ActiveSheet.UsedRange.Rows.Count
+      If Cells(i, 3).Value Like "*AI*" Then
+        Cells(i, 4).Value = "AI"
+      ElseIf Cells(i, 3).Value Like "*Machine*" Then
+        Cells(i, 4).Value = "Machine"
+      ElseIf Cells(i, 3).Value Like "*Deep*" Then
+        Cells(i, 4).Value = "Deep"
+      ElseIf Cells(i, 3).Value Like "*API*" Then
+        Cells(i, 4).Value = "API"
+      ElseIf Cells(i, 3).Value Like "*TensorFlow*" Then
+        Cells(i, 4).Value = "TensorFlow"
+      ElseIf Cells(i, 3).Value Like "*Recommend*" Then
+        Cells(i, 4).Value = "Recommend"
+      ElseIf Cells(i, 3).Value Like "*Dialogflow*" Then
+        Cells(i, 4).Value = "Dialogflow"
+      ElseIf Cells(i, 3).Value Like "*Document AI*" Then
+        Cells(i, 4).Value = "Document AI"
+      ElseIf Cells(i, 3).Value Like "*Vision AI*" Then
+        Cells(i, 4).Value = "Vision AI"
+      ElseIf Cells(i, 3).Value Like "*Vertex*" Then
+        Cells(i, 4).Value = "Vertex"
+      ElseIf Cells(i, 3).Value Like "*Natural*" Then
+        Cells(i, 4).Value = "Natural"
+      ElseIf Cells(i, 3).Value Like "*Speech*" Then
+        Cells(i, 4).Value = "Speech"
+      ElseIf Cells(i, 3).Value Like "*Translation*" Then
+        Cells(i, 4).Value = "Translation"
+      ElseIf Cells(i, 3).Value Like "*Video*" Then
+        Cells(i, 4).Value = "Video"
+      Else
+        Cells(i, 4).Value = ""
+      End If
+      If Cells(i, 3).Value Like "*Google Cloud*" Then
+        Cells(i, 5).Value = "Google Cloud"
+      End If
+      If Cells(i, 6).Value Like "*人工*" Then
+        Cells(i, 7).Value = "人工"
+      ElseIf Cells(i, 6).Value Like "*機器學習*" Then
+        Cells(i, 7).Value = "機器學習"
+      Else
+        Cells(i, 7).Value = ""
+      End If
+    Next i
+    Application.ScreenUpdating = True
+End Sub
+
